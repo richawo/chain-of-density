@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "chain-of-density"
+version = "0.1.0"
+description = ""
+authors = ["Richard Awoyemi  <35015261+RichardAwoyemi@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openai = "^0.28.0"
+python-dotenv = "^1.0.0"
+configparser = "^6.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+cod = 'chain_of_density.main:main'
