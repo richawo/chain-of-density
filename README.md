@@ -1,10 +1,21 @@
 Here is the README with a TODO list added:
 
-# Chain-of-Density 
+# Chain-of-Density
 
-This project implements the chain-of-density text summarization approach from the paper ["From Sparse to Dense: GPT-4 Summarization with Chain of Density Prompting"](https://arxiv.org/pdf/2309.04269.pdf) by researchers at Salesforce, MIT, Columbia, etc.
+This project implements the chain-of-density text summarization approach from the paper ["From Sparse to Dense: GPT-4 Summarization with Chain of Density Prompting"](https://arxiv.org/pdf/2309.04269.pdf) by researchers at Salesforce, MIT, Columbia, and others. 
 
-It implementation takes a long text input (e.g. articles, blogs, whitepapers, documents), extracts important entities, and iteratively generates increasingly concise and entity-dense summaries.
+Chain-of-density summarization is a new technique that creates highly condensed yet information-rich summaries from long-form text. It works by iteratively extracting essential entities from the source text and rewriting the summary to incorporate more entities each time (without losing previous entities), resulting in a "chain" of increasingly dense summaries.
+
+This implementation takes a long text input (e.g. articles, blogs, whitepapers, documents) and runs it through multiple cycles of entity extraction and summary rewriting to produce a final dense summary containing only the critical information from the source.
+
+Key benefits of the chain-of-density approach include:
+
+- Producing highly compressed yet faithful summaries
+- Capturing key details and concepts from complex, long-form text
+- Iteratively distilling information density
+- Leveraging large language model capabilities for summarization
+
+This repository provides code to apply chain-of-density summarization to arbitrary text inputs using the OpenAI API. It extracts entities, constructs chain-of-thought prompts, queries the API, and outputs condensed summaries.
 
 ## Usage
 
