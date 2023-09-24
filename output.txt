@@ -1,0 +1,22 @@
+[
+{
+"Missing_Entities": "LongLoRA; pre-trained large language models (LLMs); context sizes",
+"Denser_Summary": "The article discusses a new method known as LongLoRA, which is shown to be an efficient means of fine-tuning pre-trained large language models (LLMs). The main advantage of this method lies in its extension of context sizes at a reduced computational cost. Whereas training LLMs with extended context sizes usually comes with a burdensome computational demand, LongLoRA shows promise for its economical use of computational resources while still extending context sizes."
+},
+{
+"Missing_Entities": "dense global attention; sparse local attention; shift short attention",
+"Denser_Summary": "LongLoRA extends context sizes in LLMs using efficient fine-tuning and two lines of code. It leverages sparse local attention rather than the traditionally used dense global attention during inference. The method employs 'shift short attention', a novel implementation that ensures less computation while maintaining performance levels similar to those achieved with standard attention mechanisms."
+},
+{
+"Missing_Entities": "parameter-efficient fine-tuning regime; LoRA for context extension; trainable embedding and normalization",
+"Denser_Summary": "LongLoRA fine-tunes models using a parameter-efficient regime and the concept of LoRA, which expands context under the condition of trainable embedding and normalization. This fine-tuning approach, within its premise of constrained resources, excellently manages to extend the context of pre-trained LLMs via sparse local attendance, and shift short attention."
+},
+{
+"Missing_Entities": "LLaMA2 models; FlashAttention-2; LongQA dataset",
+"Denser_Summary": "LongLoRA delivers potent results across tasks on different LLaMA2 models, extending the context of LLaMA2 7B or 70B models. This approach retains the original LLM architectures and collaborates seamlessly with existing strategies like FlashAttention-2. Moreover, to practically implement LongLoRA, a LongQA dataset has been compiled, supporting supervised fine-tuning."
+},
+{
+"Missing_Entities": "Compatible with most techniques; LongQA's 3k question-answer pairs; context retained architecture",
+"Denser_Summary": "LongLoRA, an efficient method to extend LLaMA2 model context sizes, aligns well with techniques like FlashAttention-2, preserving original architectures. Using sparse local attention, shift short attention, and parameter-efficient regimes, it fine-tunes models with the help of a compiled LongQA dataset that holds over 3k long context question-answer pairs for supervision."
+}
+]

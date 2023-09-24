@@ -1,10 +1,12 @@
-import openai
-from .chat_completion import make_chat_completion_request
-import os
-import configparser
-from .msg_templates import create_system_message
+import os, openai, logging, configparser
+from chain_of_density.chat_completion import make_chat_completion_request
+from chain_of_density.msg_templates import create_system_message
 
 # Load config file and setup variables
+logging.basicConfig(filename='app.log', level=logging.DEBUG) 
+logger = logging.getLogger()
+
+logger.info("main.py initialise")
 here = os.path.abspath(os.path.dirname(__file__))
 config = configparser.ConfigParser()
 config.read("config.ini")
@@ -12,6 +14,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def perform_checks():
+    logger.info("being checks")
     # Check if OPENAI_API_KEY is set
     if "OPENAI_API_KEY" not in os.environ:
         raise EnvironmentError("OPENAI_API_KEY environment variable is not set.")
@@ -26,7 +29,7 @@ def perform_checks():
     ):
         raise FileNotFoundError(f"Input file not found at path: {input_file_path}")
 
-    print("Checks passed")
+    logger.info("Checks passed")
 
 
 def load_file():
@@ -45,6 +48,8 @@ def load_file():
 
 
 def main():
+    logger.info("main() starting")
+
     # Perform sense checks
     perform_checks()
 
@@ -62,11 +67,16 @@ def main():
     )
 
     completion = make_chat_completion_request(config, msg, n=1)
-    content  = completion["choices"][0]["message"]["content"]
-    print(content)
+    content = completion["choices"][0]["message"]["content"]
+    logger.info(content)
 
     # Write the output to file
     with open(config["DEFAULT"]["OUTPUT_FILE"], "w") as f:
         f.write(content)
 
+    return content
 
+
+if __name__ == "__main__":
+    logger.info("triggering main() execution")
+    print(main())
