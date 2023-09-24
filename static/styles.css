@@ -16,12 +16,31 @@ body {
   font-style: normal;
 }
 
-textarea, .output-container {
+.card-header {
+  background-color: #0a0a0a;
+  color: #fff !important;
+  width: 80vmin;
+  height: 80px;
+  border-left: 1px solid #191919;
+  border-right: 1px solid #191919;
+  border-top: 1px solid #191919;
+  padding: 20px !important;
+  font-size: 12px !important;
+  overflow: auto;
+  align-items: start;
+  display: flex;
+}
+
+textarea,
+.output-container {
   background-color: black;
   color: #fff !important;
   width: 80vmin;
   height: 30vmin;
   border: 1px solid #191919;
+  padding: 20px !important;
+  font-size: 12px !important;
+  overflow: auto;
 }
 
 ::placeholder {
@@ -35,6 +54,7 @@ textarea, .output-container {
   background-color: black !important;
   color: white;
   border: 1px solid #191919;
+  cursor: pointer;
 }
 
 .divider {

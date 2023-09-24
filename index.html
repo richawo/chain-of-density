@@ -7,18 +7,17 @@
 />
 <form method="POST">
   <div class="flex justify-center items-center w-full h-full">
-    <div class="container flex flex-col w-full items-center justify-center">
-      <textarea name="input_text w-64 text-white"></textarea>
-      <button class="text-sm submit-button" type="submit">Summarize</button>
+    <div class="container flex flex-col text-left w-full items-center justify-center">
+      <div class="card-header flex-col"><p>Input ✍️</p><p class="opacity-50">Enter or paste content you want summarised below.</p></div>
+      <textarea name="input_text"></textarea>
+      <input id="submit-btn" class="submit-button text-sm" type="submit" value="Summarize" />
     </div>
     <div class="h-full w-1 divider"></div>
     <div class="container flex flex-col w-full items-center justify-center">
-      <div class="output-container"></div>
-      <div class="text-sm submit-button opacity-0 cursor-default">Summarize</button>
+      <div class="card-header flex-col"><p>Output 🤯</p><p class="opacity-50">An array of summaries, each more entity-dense the previous one.</p></div>
+      <div class="output-container">{{output}}</div>
+<div class="text-sm submit-button opacity-0 cursor-default">Summarize</button>
     </div>
   </div>
 </form>
 
-{% if output %}
-<div>{{output}}</div>
-{% endif %}
