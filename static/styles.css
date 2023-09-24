@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  line-height: inherit;
+  color: rgb(var(--foreground-rgb));
+  --grid-offset: calc(50% - 3.75rem / 2);
+  background: #000;
+  background-image: linear-gradient(90deg, #0b0b0b 1px, transparent 0),
+    linear-gradient(180deg, #0b0b0b 1px, transparent 0) !important;
+  background-position: var(--grid-offset) var(--grid-offset);
+  background-size: 3.75rem 3.75rem;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100vw;
+  font-family: Montserrat;
+  font-style: normal;
+}
+
+textarea, .output-container {
+  background-color: black;
+  color: #fff !important;
+  width: 80vmin;
+  height: 30vmin;
+  border: 1px solid #191919;
+}
+
+::placeholder {
+  color: gray;
+}
+
+.submit-button {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: black !important;
+  color: white;
+  border: 1px solid #191919;
+}
+
+.divider {
+  background-color: #191919;
+}

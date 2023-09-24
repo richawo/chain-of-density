@@ -1,8 +1,24 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link
+  href="http://fonts.googleapis.com/css?family=Montserrat"
+  rel="stylesheet"
+  type="text/css"
+/>
 <form method="POST">
-    <textarea name="input_text"></textarea>
-    <input type="submit" value="Summarize">
-  </form>
+  <div class="flex justify-center items-center w-full h-full">
+    <div class="container flex flex-col w-full items-center justify-center">
+      <textarea name="input_text w-64 text-white"></textarea>
+      <button class="text-sm submit-button" type="submit">Summarize</button>
+    </div>
+    <div class="h-full w-1 divider"></div>
+    <div class="container flex flex-col w-full items-center justify-center">
+      <div class="output-container"></div>
+      <div class="text-sm submit-button opacity-0 cursor-default">Summarize</button>
+    </div>
+  </div>
+</form>
 
-  {% if output %}
-    <div>{{output}}</div>
-  {% endif %}
+{% if output %}
+<div>{{output}}</div>
+{% endif %}
