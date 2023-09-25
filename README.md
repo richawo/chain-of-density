@@ -67,3 +67,4 @@ Config options like input/output paths are stored in config.ini.
 
 - ["From Sparse to Dense: GPT-4 Summarization with Chain of Density Prompting"](https://arxiv.org/pdf/2309.04269.pdf)
 - ["Annotated + Unannotated CoD Summaries on Hugging Face"](https://huggingface.co/datasets/griffin/chain_of_density/)
+- Generating requirements.txt `poetry export --without-hashes -f requirements.txt --output requirements.txt`
