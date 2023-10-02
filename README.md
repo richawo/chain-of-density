@@ -1,5 +1,3 @@
-Here is the README with a TODO list added:
-
 # Chain-of-Density
 
 This project implements the chain-of-density text summarization approach from the paper ["From Sparse to Dense: GPT-4 Summarization with Chain of Density Prompting"](https://arxiv.org/pdf/2309.04269.pdf) by researchers at Salesforce, MIT, Columbia, and others. 
@@ -59,9 +57,10 @@ Config options like input/output paths are stored in config.ini.
 
 ## TODO
 
-- Parse output as JSON
-- Collate the list of entities and additional missing entities
-- Allow for the sequential merging and summarisations of multiple inputs
+[ ] Parse output as JSON
+[ ] Collate the list of entities and additional missing entities
+[ ] Allow for the sequential merging and summarisations of multiple inputs
+[ ] Add a critique of the Chain-of-Density approach to summarisation (pros and cons)
 
 ## References
 
