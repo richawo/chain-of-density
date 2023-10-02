@@ -57,10 +57,10 @@ Config options like input/output paths are stored in config.ini.
 
 ## TODO
 
-[ ] Parse output as JSON
-[ ] Collate the list of entities and additional missing entities
-[ ] Allow for the sequential merging and summarisations of multiple inputs
-[ ] Add a critique of the Chain-of-Density approach to summarisation (pros and cons)
+- Parse output as JSON
+- Collate the list of entities and additional missing entities
+- Allow for the sequential merging and summarisations of multiple inputs
+- Add a critique of the Chain-of-Density approach to summarisation (pros and cons)
 
 ## References
 
