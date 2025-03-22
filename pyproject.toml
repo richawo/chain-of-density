@@ -15,7 +15,7 @@ logging = "^0.4.9.6"
 
 
 [tool.poetry.group.dev.dependencies]
-gunicorn = "^21.2.0"
+gunicorn = "^23.0.0"
 
 [build-system]
 requires = ["poetry-core"]
